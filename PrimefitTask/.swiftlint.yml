@@ -1,0 +1,27 @@
+# Activate default rules
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+  - operator_usage_whitespace
+
+included:
+  - PrimefitTask
+
+excluded:
+  - Pods
+  - Generated
+  - SwiftGen
+
+line_length:
+  warning: 150
+  error: 200
+
+identifier_name:
+  min_length: 2
+  excluded:
+    - id
+    - db
