@@ -11,18 +11,6 @@ protocol CharacterServiceProtocol {
   func fetchCharacters(page: Int) async throws -> [CharacterModel]
 }
 
-final class CharacterRepository: CharacterServiceProtocol {
-    private let service: CharacterServiceProtocol
-    
-    init(service: CharacterServiceProtocol = NetworkManager.shared) {
-        self.service = service
-    }
-    
-    func fetchCharacters(page: Int) async throws -> [CharacterModel] {
-        try await service.fetchCharacters(page: page)
-    }
-}
-
 final class NetworkManager: CharacterServiceProtocol {
   static let shared = NetworkManager()
   

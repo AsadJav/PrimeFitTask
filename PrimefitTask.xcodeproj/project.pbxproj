@@ -13,11 +13,27 @@
 		CEF87AC92EE23ED90068D3AC /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = CEF87AC82EE23ED90068D3AC /* NukeVideo */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CECEE480C5B042AD007454FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF87A812EE21A9F0068D3AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEF87A882EE21A9F0068D3AC;
+			remoteInfo = PrimefitTask;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		CECEE47CC5B042AD007454FC /* PrimefitTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimefitTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF87A892EE21A9F0068D3AC /* PrimefitTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimefitTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		CECEE47DC5B042AD007454FC /* PrimefitTaskTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PrimefitTaskTests;
+			sourceTree = "<group>";
+		};
 		CEF87A8B2EE21A9F0068D3AC /* PrimefitTask */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PrimefitTask;
@@ -26,6 +42,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CECEE479C5B042AD007454FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF87A862EE21A9F0068D3AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF87A8B2EE21A9F0068D3AC /* PrimefitTask */,
+				CECEE47DC5B042AD007454FC /* PrimefitTaskTests */,
 				CEF87A8A2EE21A9F0068D3AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF87A892EE21A9F0068D3AC /* PrimefitTask.app */,
+				CECEE47CC5B042AD007454FC /* PrimefitTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +84,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CECEE47BC5B042AD007454FC /* PrimefitTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECEE482C5B042AD007454FC /* Build configuration list for PBXNativeTarget "PrimefitTaskTests" */;
+			buildPhases = (
+				CECEE478C5B042AD007454FC /* Sources */,
+				CECEE479C5B042AD007454FC /* Frameworks */,
+				CECEE47AC5B042AD007454FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECEE481C5B042AD007454FC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CECEE47DC5B042AD007454FC /* PrimefitTaskTests */,
+			);
+			name = PrimefitTaskTests;
+			packageProductDependencies = (
+			);
+			productName = PrimefitTaskTests;
+			productReference = CECEE47CC5B042AD007454FC /* PrimefitTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CEF87A882EE21A9F0068D3AC /* PrimefitTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEF87A972EE21AA40068D3AC /* Build configuration list for PBXNativeTarget "PrimefitTask" */;
@@ -96,6 +144,10 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					CECEE47BC5B042AD007454FC = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = CEF87A882EE21A9F0068D3AC;
+					};
 					CEF87A882EE21A9F0068D3AC = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -119,11 +171,19 @@
 			projectRoot = "";
 			targets = (
 				CEF87A882EE21A9F0068D3AC /* PrimefitTask */,
+				CECEE47BC5B042AD007454FC /* PrimefitTaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CECEE47AC5B042AD007454FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF87A872EE21A9F0068D3AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,6 +215,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CECEE478C5B042AD007454FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF87A852EE21A9F0068D3AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,7 +231,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CECEE481C5B042AD007454FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEF87A882EE21A9F0068D3AC /* PrimefitTask */;
+			targetProxy = CECEE480C5B042AD007454FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		CECEE483C5B042AD007454FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FF63UVHKLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asadsulemani.PrimefitTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrimefitTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrimefitTask";
+			};
+			name = Debug;
+		};
+		CECEE484C5B042AD007454FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FF63UVHKLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asadsulemani.PrimefitTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrimefitTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrimefitTask";
+			};
+			name = Release;
+		};
 		CEF87A952EE21AA40068D3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +454,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CECEE482C5B042AD007454FC /* Build configuration list for PBXNativeTarget "PrimefitTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECEE483C5B042AD007454FC /* Debug */,
+				CECEE484C5B042AD007454FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CEF87A842EE21A9F0068D3AC /* Build configuration list for PBXProject "PrimefitTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

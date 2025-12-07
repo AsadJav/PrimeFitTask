@@ -17,23 +17,17 @@ class CharactersListViewModel: ObservableObject {
   @Published var isLoadingPage: Bool = false
   @Published var showPagingLoader: Bool = false
   
-  private let repository: CharacterServiceProtocol
-  private let dbManager: DBManager
+  private let networkManager: CharacterServiceProtocol
+  private let dbManager: CharactersDBProtocol
   private var currentPage = 1
   private var hasNextPage = true
   private let maxPages = 5
   
-//  init(networkManager: NetworkManager = .shared, dbManager: DBManager = .shared) {
-//    self.networkManager = networkManager
-//    self.dbManager = dbManager
-//  }
-  
-  init(repository: CharacterServiceProtocol = CharacterRepository(), dbManager: DBManager = .shared) {
-    self.repository = repository
+  init(networkManager: CharacterServiceProtocol = NetworkManager.shared, dbManager: CharactersDBProtocol = DBManager.shared) {
+    self.networkManager = networkManager
     self.dbManager = dbManager
   }
   
-  // MARK: - LOAD FROM DATABASE FIRST
   func loadFirstPage() async {
     let saved = dbManager.loadCharacters()
     
@@ -45,7 +39,6 @@ class CharactersListViewModel: ObservableObject {
     await resetAndLoad()
   }
   
-  // MARK: - RESET (Refresh)
   func resetAndLoad() async {
     currentPage = 1
     hasNextPage = true
@@ -72,7 +65,7 @@ class CharactersListViewModel: ObservableObject {
     }
     
     do {
-      let newData = try await repository.fetchCharacters(page: currentPage)
+      let newData = try await networkManager.fetchCharacters(page: currentPage)
       
       if newData.isEmpty {
         hasNextPage = false
