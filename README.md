@@ -37,6 +37,27 @@ Local DB Manager**.
 ------------------------------------------------------------------------
 
 ## 📦 Module Breakdown & Responsibilities
+### **1. App UI
+This app displays a list of characters and allows users to view detailed information about each character with a flipping card animation.
+
+1. Characters List View (CharactersListView)
+-  Shows all characters in a scrollable list using a LazyVStack.
+-  Each character is displayed using CharacterView with their image and name.
+Supports:
+-  Pagination – loads more characters when scrolling to the bottom.
+-  Pull-to-refresh – reloads the list.
+-  Error and empty states – shows a message when there’s an error or no data.
+-  Tapping a character navigates to the details view.
+
+2. Character Details (CharacterDetailsView)
+-  Shows detailed info for a selected character.
+-  Uses CharacterFlipCard for a fun flip-card animation.
+-  Displays character info like name, status, species, gender, location, and URL.
+
+3. Flip Card (CharacterFlipCard & FlipCard)
+-  Front side: character’s image.
+-  Back side: character’s detailed information.
+-  Tap on the card to flip it with a smooth 3D animation.
 
 ### **1. CharactersListViewModel**
 
@@ -160,10 +181,8 @@ Mocking in tests
 
 Mock dependencies: - MockNetworkManager - MockDBManager
 
-Test: - First page load  
-- Pagination logic  
-- Error handling  
-- DB save calls
+Test: - Load Characters 
+- loadCharacters()
 
 ### **Service Test**
 
